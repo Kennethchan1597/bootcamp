@@ -9,14 +9,6 @@ public class Helloworld{
         System.out.println("hello again");
         System.out.println("hello\nhello again");
         //
-
-        int y = 100;
-        System.out.println(y);
-
-        // to re-assign a variable
-        //variable can only be defined once
-        y=200;
-        System.out.println(y);
         
     }
 }
