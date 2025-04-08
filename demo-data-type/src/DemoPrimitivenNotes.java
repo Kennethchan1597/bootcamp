@@ -27,10 +27,11 @@ public class DemoPrimitivenNotes {
     System.out.println(b3);
 
     //
-    b1 = 8+i2; // Cannot convert int to byte
+    b3 = 8+i2; // Cannot convert int to byte
     System.out.println(i2 + b1); // system.out always take result as int ??
 
-    // int max = 2_147_483_648
+    // java default take all number as int ??
+    // int max = 2_147_483_647
     int i = 2147483647;
     long i2 = 2147483647;
     long i3 = 2147483648; // java default take all number as int ??
