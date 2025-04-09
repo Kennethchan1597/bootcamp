@@ -1,22 +1,27 @@
+import org.w3c.dom.css.Counter;
+
 public class Week1 {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
 
-        // Primitives
+
+        // Primitives (int, double, long, short, byte, float, boolean, char)
+
         // int can be assigned to a double, but reverse is not automatic:
         // int -> double (widening, no info lost)
         // double -> int (narrowing, possible lossy conversion)
         int a = 15;
         double b = a; // widening, works, 15 -> 15.0
-        System.out.println(b); // 15.0
+        // System.out.println(b); // 15.0
         double x = 20;
         // int y = x; // error: possible lossy conversio
-        System.out.println(x);
+        // System.out.println(x);
+
 
 
         // String
         String s4 = "hello";
-        // String method 1.equals() -> (to check if it equals something), Primitives have no tools (Store value only)
+        // String method 1.equals() -> (to check if it equals something, true of false), Primitives have no tools (Store value only)
         // 1.
         s4.equals("hello"); // check if s4 = hello
         System.out.println(s4.equals("hello")); // true
@@ -25,7 +30,24 @@ public class Week1 {
         boolean result = s4.equals("hello");
         System.out.println(result); // true
 
-        // String method 2.length() -> (to check parameters)
+        // Special example
+        String tdyDrink = "Coffee";
+        if (tdyDrink.equals("Coffee")) {
+            System.out.println("Today is drinking cofee");
+        } else {
+            System.out.println("Today is not drinking coffee");
+        }
+        // Double denial (when True is useless, only need to deny)
+        // 1.
+        if (tdyDrink.equals("Coffee") == false) {
+            System.out.println("Today is not drinking coffee");
+        }
+        // 2.
+        if (!tdyDrink.equals("Coffee")) {
+            System.out.println("Today is not drinking coffee");
+        }
+
+        // String method 2.length() -> (to check length of character)
         // 1.
         s4.length(); // check the length of s4
         System.out.println(s4.length()); // 5
@@ -50,31 +72,78 @@ public class Week1 {
         System.out.println(totalScoreOfStudent);
 
         // Contitional, if... then system.out.println...
-        String sentence = "lhabfvhlafrvj.kdsV";
-        System.out.println(sentence.length());
-        if (sentence.length() >= 10 ) {
-            System.out.println("iAmSoHungry");
+        // if else example
+        String resu = "sdivisabhvlbavbhsdajbvkj";
+        System.out.println(resu.length());
+        if (resu.length() > 30) {
+            System.out.println("Exellent");
+        } else if (resu.length() > 25) {
+            System.out.println("Great");
+        } else if (resu.length() >= 20) {
+            System.out.println("Passed");
+        } else if (resu.length() != 10) {
+            System.out.println("Not full mark");
+        } else if (resu.length() < 10) {
+            System.out.println("Failed");
         }
-        // if else example 1
-        if (sentence.length() > 20 ) {
-            System.out.println("longer then 20 characters");   
+
+        // null check
+        String acc = null;
+        String name = (acc != null) ? acc : "Please enter your name";
+        System.out.println("Fuck you" + " " + name);
+
+
+        String c = "abcde";
+        if (c.charAt(c.length() / 2) == 'c') {
+            System.out.println("Yes");
         } else {
-            System.out.println("shorter than 20 characters");
+            System.out.println("No");
         }
-        // if else example 2
-        char gender = 'F';
-        if (gender == 'M') {
-            System.out.println("He is a male");
+
+        // Odd no. even no. and(&&) or(||)
+        int m1 = 7;
+        int m2 = 17;
+        // 1.
+        if (m1 % 2 == 1) {
+            System.out.println("This is an odd number");
         } else {
-            System.out.println("She is a female");
+            System.out.println("This is an even number");
         }
-        // if else example 3
-        boolean isMale = true;
-        if (isMale) {
-            System.out.println("He is a male");
+        // 2.
+        boolean isOdd = m2 % 2 == 1; // True
+        boolean isLargerThan10 = m2 >= 10;
+        if (isOdd && isLargerThan10) {
+            System.out.println("This is an odd number and larger than 10");
+        } else if (!isOdd && isLargerThan10) {
+            System.out.println("This is an even number and larger than 10");
+        } else if (isOdd && !isLargerThan10) {
+            System.out.println("This is an even number and smaller than 10");
+        } else if (!isOdd && !isLargerThan10) {
+            System.out.println("This is an even number and smaller than 10");
+        }
+        // and or
+        int x7 = 8;
+        if (x7 < 10 || x7 % 2 == 0 && x7 >= 15) {
+            System.out.println("yes");
         } else {
-            System.out.println("He is not a male");
+            System.out.println("no");
         }
+
+
+        // For Loop
+        // 3 statements for ( initialization; condition; update; )
+        // Step 1: loop, from i = 0 until s10.length
+        // Step 2: during the loop, if it meets the condition, then execute
+        // Step 3: end the loop and print the result
+        String s10 = "Hello World";
+        int counter = 0;
+        for (int i = 0; i < s10.length(); i = i + 1) {
+            System.out.println("i= " + i);
+            if (s10.charAt(i) == 'o') {
+                counter = counter + 1;
+            }
+        }
+        System.out.println("Number of O: " + counter);
 
 
     }
