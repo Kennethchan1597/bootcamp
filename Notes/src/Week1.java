@@ -6,9 +6,16 @@ public class Week1 {
 
 
         // Primitives (int, double, long, short, byte, float, boolean, char)
+        // Algorithm (+, -, *, /, % ) (odd number & even number)
+        // 3 string.methods, if else
+        // For loop ( initialization; condition; modifier ) (searching, conditaional summation)
+        // While Loop (2 nd week Condition only, similar to For Loop)
+        // Do While Loop (2nd week, no entry condition)
+        // Continue & Break (DemoGuessingGame)
+        // ASCII = computer background code assigned for every computer character
 
         // int can be assigned to a double, but reverse is not automatic:
-        // int -> double (widening, no info lost)
+        // int -> double, char -> int (widening, no info lost)
         // double -> int (narrowing, possible lossy conversion)
         int a = 15;
         double b = a; // widening, works, 15 -> 15.0
@@ -17,7 +24,10 @@ public class Week1 {
         // int y = x; // error: possible lossy conversio
         // System.out.println(x);
 
-
+        // !! Every value needs to be written(assigned first before use)
+        // int input;
+        // input != hair (Read, so invalid, input is not yet assign)
+        // input = scanner.NextInt() (Write, so valid, assigning scanner into input)
 
         // String
         String s4 = "hello";
@@ -30,23 +40,6 @@ public class Week1 {
         boolean result = s4.equals("hello");
         System.out.println(result); // true
 
-        // Special example
-        String tdyDrink = "Coffee";
-        if (tdyDrink.equals("Coffee")) {
-            System.out.println("Today is drinking cofee");
-        } else {
-            System.out.println("Today is not drinking coffee");
-        }
-        // Double denial (when True is useless, only need to deny)
-        // 1.
-        if (tdyDrink.equals("Coffee") == false) {
-            System.out.println("Today is not drinking coffee");
-        }
-        // 2.
-        if (!tdyDrink.equals("Coffee")) {
-            System.out.println("Today is not drinking coffee");
-        }
-
         // String method 2.length() -> (to check length of character)
         // 1.
         s4.length(); // check the length of s4
@@ -56,6 +49,7 @@ public class Week1 {
         System.out.println(s4length); // 5
 
         // String method 3.charAt() -> (to check the characters at certain position)
+        // char - char -> int - int (Special)
         // 1.
         s4.charAt(0); // check the chacacter at position 0 (first postion)
         System.out.println(s4.charAt(2)); // l
@@ -88,39 +82,10 @@ public class Week1 {
         }
 
         // null check
-        String acc = null;
-        String name = (acc != null) ? acc : "Please enter your name";
+        String acc = "cde";
+        String name = (acc != "as") ? acc : "Please enter your name";
         System.out.println("Fuck you" + " " + name);
 
-
-        String c = "abcde";
-        if (c.charAt(c.length() / 2) == 'c') {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
-
-        // Odd no. even no. and(&&) or(||)
-        int m1 = 7;
-        int m2 = 17;
-        // 1.
-        if (m1 % 2 == 1) {
-            System.out.println("This is an odd number");
-        } else {
-            System.out.println("This is an even number");
-        }
-        // 2.
-        boolean isOdd = m2 % 2 == 1; // True
-        boolean isLargerThan10 = m2 >= 10;
-        if (isOdd && isLargerThan10) {
-            System.out.println("This is an odd number and larger than 10");
-        } else if (!isOdd && isLargerThan10) {
-            System.out.println("This is an even number and larger than 10");
-        } else if (isOdd && !isLargerThan10) {
-            System.out.println("This is an even number and smaller than 10");
-        } else if (!isOdd && !isLargerThan10) {
-            System.out.println("This is an even number and smaller than 10");
-        }
         // and or
         int x7 = 8;
         if (x7 < 10 || x7 % 2 == 0 && x7 >= 15) {
@@ -130,21 +95,44 @@ public class Week1 {
         }
 
 
-        // For Loop
-        // 3 statements for ( initialization; condition; update; )
+        // For Loop (Searching)
+        // 3 statements for ( initialization; condition; modifier )
         // Step 1: loop, from i = 0 until s10.length
         // Step 2: during the loop, if it meets the condition, then execute
         // Step 3: end the loop and print the result
         String s10 = "Hello World";
         int counter = 0;
         for (int i = 0; i < s10.length(); i = i + 1) {
-            System.out.println("i= " + i);
             if (s10.charAt(i) == 'o') {
                 counter = counter + 1;
             }
         }
         System.out.println("Number of O: " + counter);
 
+        // For Loop
+        int result2 = 2;
+        for (int i = 0; i < 3; i++) {
+            result2 *= 2;
+        }
+        System.out.println(result2);
+
+        // While Loop
+        int result3 = 2;
+        int k = 0;
+        while (k < 3) {
+            result3 *= 2;
+            k++;
+        }
+        System.out.println(result3);
+
+        String uB = null;
+        String uC = null;
+
+        String userB = (uA != null) ? uB : "Guest B";
+        String userC = (uA != null) ? uC : "Guest C";
+
+        uB = scanner.next();
+        uC = scanner.next();
 
     }
 }
