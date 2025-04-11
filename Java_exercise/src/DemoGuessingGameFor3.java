@@ -28,7 +28,7 @@ public class DemoGuessingGameFor3 {
     System.out.println("Hello, Let's start our game!");
 
     // int bomb = random.nextInt(100 + 1);
-    int max = 900;
+    int max = 50;
     int min = 1;
     int bomb = random.nextInt(max) +1;
     int input;

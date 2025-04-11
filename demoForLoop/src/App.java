@@ -60,5 +60,22 @@ public class App {
             
         }
         //System.out.println("number of o = " + counters);
+
+        // Question: sum up 5-15 -> result
+        // The product of 16 -20 -> result 2
+        // Single for loop
+
+        int sum = 0;
+        int product = 1;
+        for (int i = 5; i < 21; i++) {
+            if (i<= 15) {
+                sum += i;
+            } else {
+                product *= i;
+            }
+        }
+        System.out.println(sum);
+        System.out.println(product);
+
     }
 }
