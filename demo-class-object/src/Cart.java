@@ -1,12 +1,17 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Cart {
 
   private Item[] items;
 
   public void setItemAmount(Item[] items) {
     this.items = items;
+  }
+
+  public Cart() {
+    this.items = new Item[0];
+  }
+
+  public int size() {
+    return this.items.length;
   }
 
   public double checkAmount() {
@@ -27,7 +32,7 @@ public class Cart {
     };
 
     c1.setItemAmount(ci1);
-    
+
     System.out.println(c1.checkAmount());
 
   }

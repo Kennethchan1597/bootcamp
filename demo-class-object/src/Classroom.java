@@ -46,6 +46,5 @@ public class Classroom {
 
     System.out.println(c1.contains("Leo"));
 
-
   }
 }
