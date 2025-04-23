@@ -1,4 +1,5 @@
-
+import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Practice {
   public static void main(String[] args) {
@@ -153,6 +154,66 @@ public class Practice {
     System.out.println(x++); // prints 6, then x becomes 7    
     System.out.println(++x); // x becomes 8, then prints 8
 
+
+    // For each
+    // for (type "individual" : "Total") { }
+    // for (String name : names) { }
+    // Looping through a String array
+    String[] names = new String[3];
+    names[0] = "Alice";
+    names[1] = "Ben";
+    names[2] = "Jackson";
+    for (String name : names){
+      System.out.println(name);
+    }
+
+    // Move the min. number to the head of the array
+    int[] numss = {1, 101, -1000, -3, 4};
+    int minIndex = 0;
+    int temp = 0;
+    for (int i = 0; i < numss.length; i++) {
+      if (numss[i] < numss[minIndex]) { 
+        minIndex = i;
+      }
+    }
+
+    temp = numss[minIndex];
+    numss[0] = numss[minIndex];
+    numss[0] = temp;
+    System.out.println(numss[0]);
+
+    int[] arr = new int[] {1, 9, 8, 4, 6, 5, 2, 3, 7};
+    int target = 8;
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == target) {
+        System.out.println("Found " + target + " at index " + i);
+        break;
+      }
+    }
+
+    char[] chs = "hello".toCharArray();
+    for (char ch : chs) {
+      ch = (ch == 'l') ? 'x' : ch;
+      System.out.println(ch);
+    }
+    System.out.println("hello".replace('l', 'x'));
+    
+    double[] values = new double[] {0.2, 0.5, 1.9};
+    for (int i=0; i< values.length; i++){
+      values[i] = BigDecimal.valueOf(values[i])
+      .add(BigDecimal.valueOf(0.1))
+      .doubleValue();
+    }
+    System.out.println(Arrays.toString(values));
+
+    BigDecimal[] bigDecimals = new BigDecimal[] {BigDecimal.valueOf(10.3), BigDecimal.valueOf(2.4), BigDecimal.valueOf(9.9)};
+
+
+    float[] fArr = new float[bigDecimals.length];
+    for (int i = 0; i < fArr.length; i++) {
+      fArr[i] = bigDecimals[i].floatValue();
+    }
+    System.out.println(Arrays.toString(fArr));
 
   }
 }

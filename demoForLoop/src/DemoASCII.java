@@ -15,5 +15,8 @@ public class DemoASCII {
     System.out.println(ans);
 
 
+    System.out.println('O' - 'a');
+
+
   }
 }

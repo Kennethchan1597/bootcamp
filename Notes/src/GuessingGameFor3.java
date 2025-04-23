@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class DemoGuessingGameFor3 {
+public class GuessingGameFor3 {
   public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
@@ -12,19 +12,16 @@ public class DemoGuessingGameFor3 {
 
     System.out.println("Guest A please enter your name: ");
     String uA = scanner.nextLine();
-    if (uA.isEmpty()) {
-      uA = "Guest A";
-    }
+    uA = (uA.isEmpty()) ? "Guest A" : uA;
+    
     System.out.println("Guest B please enter your name: ");
     String uB = scanner.nextLine();
-    if (uB.isEmpty()) {
-      uB = "Guest B";
-    }
+    uB = (uB.isEmpty()) ? "Guest B" : uB;
+
     System.out.println("Guest C please enter your name: ");
     String uC = scanner.nextLine();
-    if (uC.isEmpty()) {
-      uC = "Guest C";
-    }
+    uC = (uC.isEmpty()) ? "Guest C" : uA;
+    
     System.out.println("Hello, Let's start our game!");
 
     // int bomb = random.nextInt(100 + 1);

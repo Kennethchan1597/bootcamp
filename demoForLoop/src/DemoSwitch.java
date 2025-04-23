@@ -24,6 +24,7 @@ public class DemoSwitch {
         break;
       default:
         break;
+        
     }
 
     int value = 3;

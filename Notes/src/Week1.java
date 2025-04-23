@@ -1,17 +1,27 @@
 import org.w3c.dom.css.Counter;
 
 public class Week1 {
+
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
 
+        // Java, compile first (Compile converts source code. into byte code.)
+        // (ie. converting human readable code. into 0hjbfq78fiu)
+        // .java first compile, then upload the .class to the server, -> run the program
+        // .py does not compile, directly execute and compile in the same time
 
+        // Data type
         // Primitives (int, double, long, short, byte, float, boolean, char)
         // Algorithm (+, -, *, /, % ) (odd number & even number)
+        // Overflow && Underflow (when a number goes beyond the max or min valuea data type can store) 
+                // (goes back to the min or max value instead of crashing)
+        // true && false -> false
+        // true || false -> true
+
         // 3 string.methods, if else
         // For Loop ( initialization; condition; modifier ) (searching, conditaional summation)
         // While Loop (2 nd week Condition only, similar to For Loop)
         // Do While Loop (2nd week, no entry condition)
-        // Nested Loop
+        // Nested Loop (for loop, inside, for loop)
 
         // For loop : (Known repeat times)
         // best for counter-based loops, clean and compact
@@ -150,7 +160,7 @@ public class Week1 {
 
         // null check
         String acc = "cde";
-        String name = (acc != "as") ? acc : "Please enter your name";
+        String name = (acc != null) ? acc : "Please enter your name";
         System.out.println("Fuck you" + " " + name);
 
         // and or
@@ -216,6 +226,7 @@ public class Week1 {
         System.out.println(xx++); // prints 5, then x becomes 6
         System.out.println(xx++); // prints 6, then x becomes 7
         System.out.println(++xx); // x becomes 8, then prints 8
+
 
     }
 }
